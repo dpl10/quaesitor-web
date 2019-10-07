@@ -13,7 +13,7 @@ Use the [quaesitor.service](https://github.com/dpl10/quaesitor-web/blob/master/s
 If you use this software, please cite: Little, D.P. Submitted. Recognition of Latin scientific names using artificial neural networks. [Applications in Plant Sciences.](https://doi.org/ADD_DOI)
 
 ### license
-[MIT](https://github.com/dpl10/quaesitor-web/dpl10/blob/master/LICENSE)
+[MIT](https://github.com/dpl10/quaesitor-web/blob/master/LICENSE)
 
 ### related repositories
 * [quaesitor](https://github.com/dpl10/quaesitor)
