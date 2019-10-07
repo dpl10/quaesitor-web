@@ -1,0 +1,13 @@
+<h1><i>QUAESITOR</i> live page</h1>
+<div>
+	<p><i>QUAESITOR</i> locates Latin scientific names in Chinese, Czech, Danish, Dutch, English, French, German, Italian, Japanese, Latin, Norwegian, Polish, Portuguese, Russian, Spanish, and Swedish text (approximately 96% of biodiversity titles). It uses a combination of pattern matching (regular expressions), a Bloom filter, and a trio of complementary ensembled neural networks.</p>
+	<p>All processing is done within your web browser, so if speed is a concern please move to a faster computer or switch to the <a href="https://github.com/dpl10/quaesitor-cli" target="_blank">command–line version</a> (uses compiled C code for neural network calculations). The source code and classifiers (three ensembled compact neural networks that differ in their approach to text encoding) may be downloaded from <a href="https://github.com/dpl10/quaesitor" target="_blank">GitHub</a>.</p>
+	<p>If you use this software, please <a href="https://doi.org/ADD_DOI" target="_blank">cite it</a>.</p>
+</div>
+<p-panel header="input text">
+	<textarea pInputTextarea [(ngModel)]="inputText" class="fullWidthBox"></textarea>
+	<button pButton type="button" label="extract" (click)="processText()"></button>
+</p-panel>
+<p-panel header="extracted Latin scientific names">
+	<ul style="list-style-type:none;" [innerHTML]="outputText"></ul>
+</p-panel>

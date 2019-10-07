@@ -1,0 +1,10 @@
+.fullWidthBox {
+	box-sizing:border-box;
+	display: block; /* reset from inline */
+	width: 100%;
+	margin: 0; /* remove defaults */
+	margin-bottom: 0.75em;
+	padding: 0.5em;
+	overflow-y: auto; /* resets IE */
+	overflow-x: hidden; /* resets IE */
+}
