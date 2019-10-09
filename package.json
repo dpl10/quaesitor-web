@@ -38,6 +38,7 @@
 		"@angular/platform-browser-dynamic": "~8.0.3",
 		"@angular/router": "~8.0.3",
 		"@angular/service-worker": "^8.0.3",
+		"lite-server": "^2.5.4",
 		"primeicons": "^2.0.0",
 		"primeng": "^8.0.2",
 		"quaesitor": "^1.0.5",

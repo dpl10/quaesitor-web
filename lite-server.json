@@ -1,0 +1,7 @@
+{
+	"open": false,
+	"port": 4200,
+	"server": {
+		"baseDir": "dist/quaesitor-web"
+	}
+}
