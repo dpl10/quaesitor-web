@@ -1,5 +1,5 @@
 # quaesitor-web
-An Angular 8 web interface for [*QUAESITOR*](https://github.com/dpl10/quaesitor). A [live version](https://www.nybg.org/files/scientists/dlittle/quaesitor-web/) is hosted at the New York Botanical Garden.
+An Angular 9 web interface for [*QUAESITOR*](https://github.com/dpl10/quaesitor). A [live version](https://www.nybg.org/files/scientists/dlittle/quaesitor-web/) is hosted at the New York Botanical Garden.
 
 *QUAESITOR* locates Latin scientific names in Chinese, Czech, Danish, Dutch, English, French, German, Italian, Japanese, Latin, Norwegian, Polish, Portuguese, Russian, Spanish, and Swedish text (approximately 96% of biodiversity titles). It uses a combination of pattern matching (regular expressions), a Bloom filter, and a trio of complementary ensembled neural networks.
 
