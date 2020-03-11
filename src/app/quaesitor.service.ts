@@ -25,7 +25,7 @@ export class QuaesitorService {
 			return(['']);
 		}
 	}
-	private async getPBF(x: 'bf'|'ecnn'|'lcnn'|'pdffnn'): Promise<ArrayBuffer> {
+	private async getPBF(x: 'bf'|'bedffnn'|'ecnn'|'lcnn'|'pdffnn'|'uedffnn'): Promise<ArrayBuffer> {
 		return(await this.httpClient.get<ArrayBuffer>('assets/' + x +'.pbf', {
 			headers,
 			responseType: 'arraybuffer' as 'json' /* "as 'json'" needed because of "get<ArrayBuffer>" */
@@ -35,14 +35,18 @@ export class QuaesitorService {
 		this.classifiers = new Classifiers();
 		Promise.all([
 			this.getPBF('bf'),
+			this.getPBF('bedffnn'),
 			this.getPBF('ecnn'),
 			this.getPBF('lcnn'),
-			this.getPBF('pdffnn')
+			this.getPBF('pdffnn'),
+			this.getPBF('uedffnn')
 		]).then((x: Array<ArrayBuffer>): void => {
 			this.classifiers.bf = x[0];
-			this.classifiers.ecnn = new Uint16Array(x[1]); /* tensorflowjs_converter --quantization_bytes 2 */
-			this.classifiers.lcnn = new Uint16Array(x[2]); /* tensorflowjs_converter --quantization_bytes 2 */
-			this.classifiers.pdffnn = new Uint16Array(x[3]); /* tensorflowjs_converter --quantization_bytes 2 */
+			this.classifiers.bedffnn = new Uint16Array(x[1]); /* tensorflowjs_converter --quantization_bytes 2 */
+			this.classifiers.ecnn = new Uint16Array(x[2]); /* tensorflowjs_converter --quantization_bytes 2 */
+			this.classifiers.lcnn = new Uint16Array(x[3]); /* tensorflowjs_converter --quantization_bytes 2 */
+			this.classifiers.pdffnn = new Uint16Array(x[4]); /* tensorflowjs_converter --quantization_bytes 2 */
+			this.classifiers.uedffnn = new Uint16Array(x[5]); /* tensorflowjs_converter --quantization_bytes 2 */
 			this.quaesitor = new Quaesitor();
 			this.quaesitor.loadClassifiers(this.classifiers).then((): void => {
 				this.loaded = true;
