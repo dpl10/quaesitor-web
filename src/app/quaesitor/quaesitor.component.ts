@@ -16,7 +16,7 @@ export class QuaesitorComponent implements  OnInit {
 	}
 	public async processText(): Promise<boolean> {
 		if(this.inputText === undefined){
-console.log('input erorr');
+			console.error('input erorr');
 // do something
 			return(true);
 		} else {
